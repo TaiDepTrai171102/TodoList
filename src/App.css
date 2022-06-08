@@ -1,0 +1,115 @@
+
+.App {
+  text-align: center;
+}
+
+.App-logo {
+  height: 40vmin;
+  pointer-events: none;
+}
+
+@media (prefers-reduced-motion: no-preference) {
+  .App-logo {
+    animation: App-logo-spin infinite 20s linear;
+  }
+}
+
+.App-header {
+  background-color: #282c34;
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  font-size: calc(10px + 2vmin);
+  color: white;
+}
+
+.App-link {
+  color: #61dafb;
+}
+
+@keyframes App-logo-spin {
+  from {
+    transform: rotate(0deg);
+  }
+  to {
+    transform: rotate(360deg);
+  }
+}
+.btn {
+  border: none;
+  color: black;
+  background-color: white;
+  font-size: 20px;
+  font-weight: 700;
+}
+
+.btn:hover{
+  cursor: pointer;
+}
+
+.btn--pluss{
+  padding: 0px 10px;
+  border: 3px solid black;
+  border-radius: 50%;
+  position: relative;
+  top:10px;
+  right: -10px;
+}
+
+.btn--completed{
+  display: block;
+  color: rgb(8, 245, 87);
+  margin-top: 4px;
+}
+
+.btn--remove{
+  font-weight: 700;
+}
+.input {
+  padding: 10px 10px;
+
+}
+
+.input--task {
+  border: 2px solid rgb(53, 170, 248);
+  border-radius: 10px;
+  width: 60%;
+  overflow: hidden;
+}
+form{
+  max-width: 600px;
+  border: 3px solid black;
+  overflow: hidden;
+  position: relative;
+  right: -390px;
+  top:20px;
+  height: 950px;
+  border-radius: 10px;
+}
+
+.form-control{
+  padding-bottom: 30px;
+}
+hr{
+  border: 1px solid black;
+}
+.cmn{
+  display: flex;
+  justify-content: space-between;
+  padding: 20px;
+}
+.cmm{
+ margin: 20px;
+}
+.panigation-wrapper{
+  width: 200px;
+  margin: 0 auto;
+  display: flex;
+  justify-content: space-between;
+}
+
+.btn--active{
+  color: red;
+}

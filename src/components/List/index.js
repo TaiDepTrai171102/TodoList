@@ -3,22 +3,22 @@ import ListItem from './ListItem'
 
 export default class List extends Component {
   constructor(props) {
-    super(props);
-    this.props = props;
+    super(props)
+    this.props = props
   }
+
   render() {
-    const { listTasks } = this.props;
+    const { taskLists , taskDelete , taskComplete} = this.props
     return (
-      <>
-        <div className="list-wrapper">
-          {
-            listTasks.map((item) =>{
-              return <ListItem key={item.id} content={item.taskName} status={item.isCompleted}/>
-            })
-          }
-          
-        </div>
-      </>
-    );
+      <div className='list-wrapper'>
+        {taskLists.map(taskItem => (<ListItem
+         key={taskItem.id}
+         task={taskItem}
+         taskDelete={taskDelete}
+         taskComplete={taskComplete}
+         />))}
+         
+      </div>
+    )
   }
 }

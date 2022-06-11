@@ -2,20 +2,19 @@ import React, { Component } from 'react'
 import './style.css'
 
 export default class Input extends Component {
- /* contructor(props){
-   
-    this.handleChangeInput = this.handleChangeInput.bind(this)
+  constructor(props) {
+    super(props)
+    this.props = props
   }
 
-handleChangeInput(event){
-  console.log(event.target.value);  
-}
-*/
   render() {
     return (
-      <input className='input input--task' placeholder='Add new task in here'/* onChange={this.handleChangeInput}*/>
-
-      </input>
+      <input
+        className='input input--task'
+        placeholder='Add new task in here'
+        value={this.props.value}
+        onChange={this.props.handleChangeInputTask}
+      />
     )
   }
 }

@@ -1,21 +1,14 @@
-export const listTasks = [{
-      id: 1,
-    taskName:'Thuc day',
-    isCompleted: false,
-},
-{
-    id: 2,
-  taskName:'DI IA',
-  isCompleted: false,
-},
-{
-    id: 3,
-  taskName:'di ve sinh',
-  isCompleted: false,
-},
-{
-    id: 4,
-  taskName:'Thuc day',
-  isCompleted: false,
-}]
-    
+export const initialTasks = []
+export const defaultValueTask = {
+  id: new Date().getTime(),
+  taskName: '',
+  isCompleted: false
+}
+
+export const LIMIT_TASK_IN_PAGE = 5
+
+// task = {
+//   id: ,
+//   taskName:
+//   isCompleted:
+// }

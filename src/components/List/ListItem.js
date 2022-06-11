@@ -6,26 +6,32 @@ import './style.css'
 
 export default class ListItem extends Component {
   constructor(props) {
-    super(props);
+    super(props)
     this.props = props;
+    
   }
 
   render() {
-    const { content , status } = this.props;
-
+    const { task , taskDelete , taskComplete } = this.props
     return (
       <>
-        <div className="list-item">
+        <div className='list-item'>
           <div>
-            <ListContent content={content} status={status}/>
+            <ListContent content={task.taskName} isCompleted={task.isCompleted} />
           </div>
-          <div style={{ display: "flex", gap: "10px"}}>
-            <ButtonSpecial completed />
-            <ButtonSpecial deleted />
+          <div style={{ display: 'flex', gap: '10px' }}>
+            {
+            
+            
+            !task.isCompleted &&
+            <ButtonSpecial completed  onClick={() => taskComplete(task.id)} />
+            
+  }
+            <ButtonSpecial remove onClick={() => taskDelete(task.id) }  />
           </div>
         </div>
-        <Divider />
+        <Divider fullWidth />
       </>
-    );
+    )
   }
 }
